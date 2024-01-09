@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1/style.css">
+    <title>Garage sales</title>
+      </head>
+      <body>
+	  <script src="app.js"></script>
+      <h1 class="lead"> Welcome To Our Store</h1>
+    <div id="container">
+      <div class="form-wrap">
+        <h2>Raising money for orphanage</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" required name="Name" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" required name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="creditNo">Credit Card Number</label>
+            <input type="text" maxlength="19" onkeyup="formatCreditCard()" placeholder="xxxx-xxxx-xxxx-xxxx" name="card-number" id="creditNo" value="" >
+          </div>
+          
+          <div class="form-group">
+            <label for="creditExpM">Credit Card Expiry Month</label>
+            <input type="text" maxlength="3" onkeydown="return /[a-z]/i.test(event.key)" name="creditExpM" id="creditExpM" onblur="capitalizeWords()" placeholder="MMM" />
+          </div>
+          <div class="form-group">
+              <label for="CreditExpY">Credit Card Expiry Year</label>
+              <input type="number" name="CreditExpY" id="CreditExpY" maxlength="4" min="2021" max="2030" placeholder="YYYY"/>
+            </div>
+          <h2>Buy Generously</h2>
+          <h3 id="error-wrong-input" class="hidden warning">Please input numeric value for your purchases</h3>
+          <h3 id="error-empty-fields" class="hidden warning">Please fill atleast one field in order to make a purchase</h3>
+          <div class="form-group">
+              <label for="waterbottles">No of Water Bottles($5)</label>
+              <input type="text" name="waterbottles" id="waterbottles" />
+          </div>
+          <div class="form-group">
+              <label for="caps">No of Caps($20)</label>
+              <input type="text" name="caps" id="caps" />
+          </div>
+          <div class="form-group">
+              <label for="pens">No of Pens($2)</label>
+              <input type="text" name="pens" id="pens" />
+          </div>
+          <div class="form-group">
+              <label for="candybags">No of Candy Bags($10)</label>
+              <input type="text" name="candybags" id="candybags" />
+          </div>
+          <div class="form-group">
+              <label for="cupcakes">No of Cup Cakes($3)</label>
+              <input type="text" name="cupcakes" id="cupcakes" />
+          </div>
+          <button type="button" class="btn" onclick="validateForm()">Checkout</button>
+        </form>
+      </div>
+      <br/>
+      <div class="form-wrap">
+        <h2>Thank you for your parchase</h2>
+        <div class="form-wrap">
+          <h3>Name</h3>
+            
+        </div>
+      </div>
+      
+	  <table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+	<th>Credit Card</th>
+    </tr>
+	
+  <tr>
+    <td>xyz</td>
+    <td>xyz@gmail.com</td>
+    <td>xxxx-xxxx-xxxx-xxxx</td>
+  </tr>
+     </table>
+	  
+	  <br>
+	  
+ <table>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+	<th>Unit Price</th>
+	<th>Total Price</th>
+	
+    
+  </tr>
+  <tr>
+    
+  </tr>
+ 
+     </table>
+
+</body>
+</html>
